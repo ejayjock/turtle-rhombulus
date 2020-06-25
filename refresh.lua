@@ -1,4 +1,4 @@
---[[ Rev02
+--[[ Rev02-Eliza
 Script cleans all local files and syncs with github repository]]--
 
 local gUser = "ejayjock"
