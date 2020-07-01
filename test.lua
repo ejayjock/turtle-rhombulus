@@ -2,6 +2,8 @@ print("how deep")
 nDeep=io.read()
 nDeep=tonumber(nDeep)
 
+print("Marco YOLO")
+
 for i=1,4 do
 
  for i=1,nDeep do
@@ -13,8 +15,5 @@ for i=1,4 do
      turtle.up()
  end
 
- turtle.turnLeft()
- turtle.dig()
  turtle.forward()
-
 end
