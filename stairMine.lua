@@ -13,7 +13,7 @@ Series of turtle commands:
 for i=1,5 do
   cont=true
   while cont do
-    if turtle.detectUp()
+    if turtle.detectUp() then
       turtle.digUp()
     else
       cont=false
@@ -22,7 +22,7 @@ for i=1,5 do
   turtle.up()
   cont=true
   while cont do
-    if turtle.detectUp()
+    if turtle.detectUp() then
       turtle.digUp()
     else
       cont=false
@@ -33,7 +33,7 @@ for i=1,5 do
   turtle.down()
   cont=true
   while cont do
-    if turtle.detect()
+    if turtle.detect() then
       turtle.dig()
     else
       cont=false
