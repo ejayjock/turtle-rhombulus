@@ -66,12 +66,12 @@ function clear(direction)
 end
 
 for i=1,5 do
-  clearUp()
+  clear('up')
   turtle.up()
-  clearUp()
+  clear('up')
   turtle.down()
   turtle.digDown()
   turtle.down()
-  clearForward()
+  clear('forward')
   turtle.forward()
 end
