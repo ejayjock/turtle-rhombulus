@@ -65,6 +65,13 @@ function clear(direction)
   end
 end
 
+function fillDown()
+  if not turtle.detectDown() then
+    turtle.select(16)
+    turtle.placeDown()
+  end
+end
+
 for i=1,5 do
   clear('up')
   turtle.up()
@@ -72,6 +79,7 @@ for i=1,5 do
   turtle.down()
   turtle.digDown()
   turtle.down()
+  fillDown()
   clear('forward')
   turtle.forward()
 end
