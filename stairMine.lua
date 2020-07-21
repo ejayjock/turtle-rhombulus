@@ -9,27 +9,12 @@ Series of turtle commands:
   - dig Forward
   - move forward ]]
 
-function clearUp()
-  cont=true
-  while cont do
-    if turtle.detectUp() then
-      turtle.digUp()
-    else
-      cont=false
-    end
-  end
-end
+print("how deep?")
+nDeep=tonumber(io.read())
 
-function clearForward()
-  cont=true
-  while cont do
-    if turtle.detect() then
-      turtle.dig()
-    else
-      cont=false
-    end
-  end
-end
+print("What slot is the fill material in?")
+nSlot=tonumber(io.read())
+
 
 function clear(direction)
   cont=true
@@ -65,21 +50,21 @@ function clear(direction)
   end
 end
 
-function fillDown()
+function fillDown(slot)
   if not turtle.detectDown() then
-    turtle.select(16)
+    turtle.select(slot)
     turtle.placeDown()
   end
 end
 
-for i=1,5 do
+for i=1,nDeep do
   clear('up')
   turtle.up()
   clear('up')
   turtle.down()
   turtle.digDown()
   turtle.down()
-  fillDown()
+  fillDown(nSlot)
   clear('forward')
   turtle.forward()
 end
